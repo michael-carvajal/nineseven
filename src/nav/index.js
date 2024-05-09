@@ -1,7 +1,6 @@
 import React from 'react'
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 import { styled, useTheme } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -24,10 +23,7 @@ function NavBar() {
     setOpen(newOpen);
   };
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-  
+
   const handleDrawerClose = () => {
     setOpen(false);
   };
