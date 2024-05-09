@@ -11,8 +11,10 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import { Menu } from '@mui/icons-material';
 import MailIcon from '@mui/icons-material/Mail';
 import HomeIcon from '@mui/icons-material/Home';
+import { Typography } from '@mui/material';
 
 
 function NavBar() {
@@ -63,12 +65,19 @@ function NavBar() {
   );
 
   return (
-    <div>
-      <Button onClick={toggleDrawer(true)}>Open drawer</Button>
+    <Box sx={{
+      backgroundColor: 'grey',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      height: '65px'
+    }}> 
+      <Menu fontSize='large' sx={{paddingLeft: '22px'}}onClick={toggleDrawer(true)}>Open drawer</Menu>
+      <Typography sx={{paddingRight: '24px'}}>NinesevenPTA</Typography>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>
-    </div>
+    </Box>
   );
 }
 
