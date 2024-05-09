@@ -24,6 +24,13 @@ function NavBar() {
     setOpen(newOpen);
   };
 
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+  
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
   const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
@@ -32,13 +39,16 @@ function NavBar() {
     ...theme.mixins.toolbar,
     justifyContent: 'flex-end',
   }));
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
 
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+  const NavContainer = styled('div')(({theme}) => ({
+     
+      backgroundColor: theme.palette.secondary.main,
+      // backgroundColor: 'grey',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      height: '65px'
+    }));
 
 
   const DrawerList = (
@@ -65,19 +75,13 @@ function NavBar() {
   );
 
   return (
-    <Box sx={{
-      backgroundColor: 'grey',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      height: '65px'
-    }}> 
+    <NavContainer > 
       <Menu fontSize='large' sx={{paddingLeft: '22px'}}onClick={toggleDrawer(true)}>Open drawer</Menu>
       <Typography sx={{paddingRight: '24px'}}>NinesevenPTA</Typography>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>
-    </Box>
+    </NavContainer>
   );
 }
 

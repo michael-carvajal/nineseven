@@ -2,17 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { StyledEngineProvider } from '@mui/material/styles';
-
+import CustomThemeProvider from './customTheme';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+        <CustomThemeProvider >
     <StyledEngineProvider injectFirst>
 
       <App />
     </StyledEngineProvider >
+        </CustomThemeProvider>
   </React.StrictMode>
 );
 
