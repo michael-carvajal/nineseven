@@ -1,8 +1,12 @@
 import React from 'react'
+import { Typography } from '@mui/material'
 
-function Home() {
+function Home({theme}) {
   return (
-    <div>Home</div>
+    <Typography sx={{
+      color: theme.palette.background.default
+  
+          }}>Main section</Typography>
   )
 }
 

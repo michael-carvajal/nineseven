@@ -1,6 +1,10 @@
 import * as React from 'react';
 import NavBar from './nav';
 import { Typography, styled, useTheme } from '@mui/material';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './home'
+import About from './about'
+import Contact from './contact'
 
 export default function App() {
   const theme = useTheme();
@@ -18,13 +22,20 @@ export default function App() {
 
   return (
     <MainContainer>
-      <NavBar />
-      <MainContent>
-        <Typography sx={{
-    color: theme.palette.background.default
-
-        }}>Main section</Typography>
-      </MainContent>
+      <NavBar Link={Link} />
+      <Router>
+        
+        <MainContent>
+          <Typography sx={{
+            color: theme.palette.background.default
+          }}>Main section</Typography>
+        </MainContent>
+        <Routes>
+        <Route path="/" element={<Home theme={theme}/>} />
+          <Route path="/about" element={<About theme={theme}/>} />
+          <Route path="/contact" element={<Contact theme={theme}/>} />
+        </Routes>
+      </Router>
     </MainContainer>
   );
 }
