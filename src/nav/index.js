@@ -16,7 +16,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import { Typography } from '@mui/material';
 
 
-function NavBar() {
+function NavBar({Link}) {
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
   const toggleDrawer = (newOpen) => () => {
@@ -55,16 +55,19 @@ function NavBar() {
           </IconButton>
         </DrawerHeader>
       <List>
-        {['Home', 'About', 'Contact'].map((text, index) => (
+        {['Home', 'About', 'Contact'].map((text, index) => {
+          const lowerCase = text.split().map((letter, idx) => idx === 0 ? letter.toLocaleLowerCase() : letter ).join();
+          console.log(lowerCase);
+          return (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {text === "Home" ? <HomeIcon /> : <MailIcon />}
+                <Link to={`/${lowerCase}`}>{text === "Home" ? <HomeIcon /> : <MailIcon />}</Link>
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
-        ))}
+        )})}
       </List>
 
     </Box>

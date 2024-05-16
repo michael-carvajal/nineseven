@@ -22,14 +22,10 @@ export default function App() {
 
   return (
     <MainContainer>
-      <NavBar Link={Link} />
       <Router>
+      <NavBar Link={Link} />
         
-        <MainContent>
-          <Typography sx={{
-            color: theme.palette.background.default
-          }}>Main section</Typography>
-        </MainContent>
+  
         <Routes>
         <Route path="/" element={<Home theme={theme}/>} />
           <Route path="/about" element={<About theme={theme}/>} />
