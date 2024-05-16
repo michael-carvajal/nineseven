@@ -1,9 +1,16 @@
 import React from 'react'
-import { Typography } from '@mui/material'
+import { Typography, styled } from '@mui/material'
 import { Spotify } from 'react-spotify-embed'
 function Home({theme}) {
+
+  const Container = styled('div')(({theme}) => ({
+    display:'flex',
+    flexDirection: 'column', 
+    justifyContent: 'center',
+    alignItems: 'center'
+  }));
   return (
-    <>
+    <Container>
       <Typography sx={{
         color: theme.palette.background.default
             }}>Main section</Typography>
@@ -11,7 +18,7 @@ function Home({theme}) {
             <Spotify link="https://open.spotify.com/album/0uJOBzHP3SAIMfL8Gf5CSv?si=ScqzO4b5Q0qH-gWAoXcooQ" />
 
 
-    </>
+    </Container>
   )
 }
 

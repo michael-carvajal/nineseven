@@ -1,6 +1,6 @@
 import * as React from 'react';
 import NavBar from './nav';
-import { Typography, styled, useTheme } from '@mui/material';
+import { styled, useTheme } from '@mui/material';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './home'
 import About from './about'
@@ -15,10 +15,7 @@ export default function App() {
     backgroundColor: theme.palette.primary.main
   }));
 
-  const MainContent = styled('div')(({theme}) => ({
-    flex: '1', // Make the content area flexible to fill available space
-    padding: '20px', // Add padding as needed
-  }));
+  
 
   return (
     <MainContainer>
