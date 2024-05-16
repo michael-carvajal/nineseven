@@ -56,16 +56,19 @@ function NavBar({Link}) {
         </DrawerHeader>
       <List>
         {['Home', 'About', 'Contact'].map((text, index) => {
-          const lowerCase = text.split().map((letter, idx) => idx === 0 ? letter.toLocaleLowerCase() : letter ).join();
+          
+          const lowerCase =index === 0 ? "" : text.split().map((letter, idx) => idx === 0 ? letter.toLocaleLowerCase() : letter ).join();
           console.log(lowerCase);
           return (
           <ListItem key={text} disablePadding>
+                <Link to={`/${lowerCase}`}>
             <ListItemButton>
               <ListItemIcon>
-                <Link to={`/${lowerCase}`}>{text === "Home" ? <HomeIcon /> : <MailIcon />}</Link>
+                  {text === "Home" ? <HomeIcon /> : <MailIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
+                  </Link>
           </ListItem>
         )})}
       </List>

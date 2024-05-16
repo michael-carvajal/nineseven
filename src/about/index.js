@@ -1,8 +1,11 @@
 import React from 'react'
-
-function About() {
+import { Typography } from '@mui/material'
+function About({theme}) {
   return (
-    <div>About</div>
+    <Typography sx={{
+      color: theme.palette.background.default
+  
+          }}>About</Typography>
   )
 }
 
