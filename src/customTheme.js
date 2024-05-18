@@ -17,6 +17,7 @@ const theme = createTheme({
       default: '#ffffff', // White
     },
   },
+  direction : 'rtl'
 });
 
 const CustomThemeProvider = ({ children }) => {

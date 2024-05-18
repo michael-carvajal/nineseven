@@ -43,7 +43,8 @@ function NavBar({Link}) {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      height: '65px'
+      height: '65px',
+      padding: '0px 20px'
     }));
 
 
@@ -78,9 +79,9 @@ function NavBar({Link}) {
 
   return (
     <NavContainer > 
-      <Menu fontSize='large' sx={{paddingLeft: '22px'}}onClick={toggleDrawer(true)}>Open drawer</Menu>
       <Typography sx={{paddingRight: '24px'}}>NinesevenPTA</Typography>
-      <Drawer open={open} onClose={toggleDrawer(false)}>
+      <Menu fontSize='large' sx={{}}onClick={toggleDrawer(true)}>Open drawer</Menu>
+      <Drawer open={open} onClose={toggleDrawer(false)} anchor='right'>
         {DrawerList}
       </Drawer>
     </NavContainer>
