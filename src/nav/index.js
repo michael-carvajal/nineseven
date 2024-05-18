@@ -13,7 +13,7 @@ import ListItemText from '@mui/material/ListItemText';
 import { Menu } from '@mui/icons-material';
 import MailIcon from '@mui/icons-material/Mail';
 import HomeIcon from '@mui/icons-material/Home';
-import { Typography } from '@mui/material';
+import { Typography, Button } from '@mui/material';
 
 
 function NavBar({Link}) {
@@ -84,7 +84,7 @@ function NavBar({Link}) {
       <Box sx={{display: {xs : 'none', md : 'flex', }, justifyContent:'space-between', width: '400px', marginRight: 2}} flexDirection='row'>
       {['Home', 'Music', 'EPK', 'Merch', 'Contact'].map((section, key) => (
         <React.Fragment key={`${key}`}>
-          <Typography >{section}</Typography>
+          <Button variant='text' color='inherit'>{section}</Button>
         </React.Fragment>
       ))}
       </Box>
