@@ -21,7 +21,6 @@ export default function App() {
 
   return (
     <MainContainer>
-      <Router>
         <Box sx={{    backgroundImage: `url(${HomeBG})`, // Correct syntax for setting background image
     backgroundSize: 'cover', // Ensure the background image covers the whole container
     backgroundPosition: 'center', // Center the background image
@@ -29,13 +28,8 @@ export default function App() {
         
         <NavBar Link={Link} />
         
-          <Routes>
-          <Route path="/" element={<Home theme={theme}/>} />
-            <Route path="/about" element={<About theme={theme}/>} />
-            <Route path="/contact" element={<Contact theme={theme}/>} />
-          </Routes>
+        <Home theme={theme}/>
       </Box>
-      </Router>
     </MainContainer>
   );
 }
