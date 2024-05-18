@@ -44,7 +44,7 @@ function NavBar({Link}) {
       justifyContent: 'space-between',
       alignItems: 'center',
       height: '65px',
-      padding: '0px 20px'
+      padding: '0px 60px'
     }));
 
 
@@ -79,8 +79,15 @@ function NavBar({Link}) {
 
   return (
     <NavContainer > 
-      <Typography sx={{paddingRight: '24px'}}>NinesevenPTA</Typography>
-      <Menu fontSize='large' sx={{display: {md: 'none'}}}onClick={toggleDrawer(true)}>Open drawer</Menu>
+      <Typography sx={{}}>NinesevenPTA</Typography>
+      <Menu fontSize='large' sx={{display: {md: 'none'}}}onClick={toggleDrawer(true)}></Menu>
+      <Box sx={{display: {xs : 'none', md : 'flex', }, justifyContent:'space-between', width: '400px', marginRight: 2}} flexDirection='row'>
+      {['Home', 'Music', 'EPK', 'Merch', 'Contact'].map((section, key) => (
+        <React.Fragment key={`${key}`}>
+          <Typography>{section}</Typography>
+        </React.Fragment>
+      ))}
+      </Box>
       <Drawer open={open} onClose={toggleDrawer(false)} anchor='right'>
         {DrawerList}
       </Drawer>
