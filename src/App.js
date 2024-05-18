@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './home'
 import About from './about'
 import Contact from './contact'
+import Music from './music';
 import HomeBG from './assets/home_background.jpg'
 export default function App() {
   const theme = useTheme();
@@ -29,6 +30,7 @@ export default function App() {
         <NavBar Link={Link} />
         
         <Home theme={theme}/>
+        <Music theme={theme}/>
       </Box>
     </MainContainer>
   );

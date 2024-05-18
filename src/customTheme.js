@@ -15,6 +15,7 @@ const theme = createTheme({
     },
     background: {
       default: '#ffffff', // White
+      secondary: '#301934'
     },
   },
   direction : 'rtl'

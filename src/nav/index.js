@@ -35,7 +35,7 @@ function NavBar({Link}) {
     <NavContainer sx={{color: theme.palette.background.default,}} > 
       <Typography sx={{}}>NinesevenPTA</Typography>
       <Menu fontSize='large' sx={{display: {md: 'none'}}}onClick={toggleDrawer(true)}></Menu>
-      <Box sx={{display: {xs : 'none', md : 'flex', }, justifyContent:'space-between', width: '400px', marginRight: 2}} flexDirection='row'>
+      <Box sx={{display: {xs : 'none', md : 'flex', }, justifyContent:'space-between', width: '400px'}} flexDirection='row'>
       {['Home', 'Music', 'EPK', 'Merch', 'Contact'].map((section, key) => (
         <React.Fragment key={`${key}`}>
           <Button variant='text' color='inherit'>{section}</Button>
