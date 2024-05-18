@@ -80,7 +80,7 @@ function NavBar({Link}) {
   return (
     <NavContainer > 
       <Typography sx={{paddingRight: '24px'}}>NinesevenPTA</Typography>
-      <Menu fontSize='large' sx={{}}onClick={toggleDrawer(true)}>Open drawer</Menu>
+      <Menu fontSize='large' sx={{display: {md: 'none'}}}onClick={toggleDrawer(true)}>Open drawer</Menu>
       <Drawer open={open} onClose={toggleDrawer(false)} anchor='right'>
         {DrawerList}
       </Drawer>
