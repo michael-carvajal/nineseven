@@ -38,7 +38,7 @@ function NavBar({Link}) {
 
   const NavContainer = styled('div')(({theme}) => ({
      
-      backgroundColor: theme.palette.secondary.main,
+      // backgroundColor: theme.palette.secondary.main,
       // backgroundColor: 'grey',
       display: 'flex',
       justifyContent: 'space-between',
@@ -78,13 +78,13 @@ function NavBar({Link}) {
   );
 
   return (
-    <NavContainer > 
+    <NavContainer sx={{color: theme.palette.background.default,}} > 
       <Typography sx={{}}>NinesevenPTA</Typography>
       <Menu fontSize='large' sx={{display: {md: 'none'}}}onClick={toggleDrawer(true)}></Menu>
       <Box sx={{display: {xs : 'none', md : 'flex', }, justifyContent:'space-between', width: '400px', marginRight: 2}} flexDirection='row'>
       {['Home', 'Music', 'EPK', 'Merch', 'Contact'].map((section, key) => (
         <React.Fragment key={`${key}`}>
-          <Typography>{section}</Typography>
+          <Typography >{section}</Typography>
         </React.Fragment>
       ))}
       </Box>
