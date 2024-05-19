@@ -22,6 +22,8 @@ function NavBar({Link}) {
       // backgroundColor: theme.palette.secondary.main,
       // backgroundColor: 'grey',
       display: 'flex',
+      position: 'fixed',
+      width: '100%',
       justifyContent: 'space-between',
       alignItems: 'center',
       height: '65px',
