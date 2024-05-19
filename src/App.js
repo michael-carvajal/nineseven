@@ -1,7 +1,6 @@
 import * as React from "react";
 import NavBar from "./nav";
 import { styled, useTheme, Box } from "@mui/material";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./home";
 import About from "./about";
 import Contact from "./contact";
@@ -27,7 +26,7 @@ export default function App() {
           position: "relative",
         }}
       >
-        <NavBar Link={Link} />
+        <NavBar />
 
         <Home theme={theme} />
         <Music theme={theme} />

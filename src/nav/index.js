@@ -8,7 +8,7 @@ import { Typography, Button } from '@mui/material';
 import DrawerList from './DrawerList';
 
 
-function NavBar({Link}) {
+function NavBar() {
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
   const toggleDrawer = (newOpen) => () => {
@@ -45,7 +45,7 @@ function NavBar({Link}) {
       ))}
       </Box>
       <Drawer open={open} onClose={toggleDrawer(false)} anchor='right'>
-        <DrawerList toggleDrawer={toggleDrawer} setOpen={setOpen} theme={theme} styled={styled} Link={Link}/>
+        <DrawerList toggleDrawer={toggleDrawer} setOpen={setOpen} theme={theme} styled={styled} />
       </Drawer>
     </NavContainer>
   );
