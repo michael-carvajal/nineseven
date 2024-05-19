@@ -1,9 +1,13 @@
 import React from "react";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, styled } from "@mui/material";
 import headshot1 from "../assets/headshot1.jpg";
 
 function Home({ theme }) {
+  const NewSong = styled("div")(({ theme }) => ({
+    backgroundColor: theme.palette.background.secondary,
+    color: theme.palette.background.default
+  }));
   return (
     <Box
       sx={{
@@ -25,20 +29,24 @@ function Home({ theme }) {
           width: "90%",
         }}
       >
-        <Box sx={{ width: 250 }}>
+        <Box sx={{ width: 375 }}>
           <img
             src={headshot1}
-            style={{ width: "100%" }}
+            style={{ width: "100%", borderRadius: 7 }}
             alt="home page hero card"
           ></img>
         </Box>
-        <Box sx={{ alignSelf: { xs: "auto", md: "end" } }}>
+        <NewSong sx={{ alignSelf: { xs: "auto", md: "end" } }}>
           <Typography>New Single 'THIRTEEN' out NOW</Typography>
-          <Button>
+          <Button
+            href="https://www.youtube.com/watch?v=6TtH_kTskKc&t=4s"
+            target="_blank"
+            variant="contained"
+          >
             <MusicNoteIcon />
             Listen
           </Button>
-        </Box>
+        </NewSong>
       </Box>
     </Box>
   );
