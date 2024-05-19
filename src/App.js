@@ -12,7 +12,6 @@ export default function App() {
   const MainContainer = styled("div")(({ theme }) => ({
     display: "flex", // Use flexbox
     flexDirection: "column", // Column layout
-    minHeight: "100vh", // Ensure the container fills the viewport height
     backgroundColor: "none",
 
     // transform: `rotate(${180})'`
